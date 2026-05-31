@@ -1,6 +1,6 @@
 {
   "name": "deskit-plugin-timestamp",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "description": "Timestamp converter plugin for DesKit",
   "license": "MIT",
