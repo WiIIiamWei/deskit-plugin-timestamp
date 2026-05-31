@@ -1,24 +1,127 @@
 {
   "$schema": "./schema/deskit-manifest.schema.json",
-  "id": "com.example.hello",
-  "name": "hello",
-  "displayName": { "en": "Hello", "zh-CN": "你好" },
-  "description": {
-    "en": "A starter DesKit plugin that greets you.",
-    "zh-CN": "一个问候你的 DesKit 入门插件。"
+  "id": "com.deskit.timestamp",
+  "name": "timestamp",
+  "displayName": {
+    "en": "Timestamp Converter",
+    "zh-CN": "时间戳转换"
   },
-  "version": "0.1.0",
-  "author": "Your Name",
-  "engines": { "deskit": "^0.1.0" },
+  "description": {
+    "en": "Convert between Unix timestamps and readable dates.",
+    "zh-CN": "在 Unix 时间戳和可读日期之间相互转换。"
+  },
+  "version": "0.2.0",
+  "author": "DesKit",
+  "engines": { "deskit": "^0.2.0" },
   "main": "dist/index.js",
   "contributes": {
     "commands": [
       {
-        "id": "hello.greet",
-        "title": { "en": "Hello", "zh-CN": "你好" },
-        "subtitle": { "en": "Greet someone", "zh-CN": "向某人问好" },
-        "keywords": ["hello", "greet", "你好"],
+        "id": "timestamp.convert",
+        "title": {
+          "en": "Convert Timestamp",
+          "zh-CN": "转换时间戳"
+        },
+        "subtitle": {
+          "en": "Seconds, milliseconds, dates, and time zones",
+          "zh-CN": "支持秒、毫秒、日期和时区"
+        },
+        "keywords": [
+          "timestamp",
+          "time",
+          "date",
+          "unix",
+          "epoch",
+          "ts",
+          "时间戳",
+          "日期",
+          "时间"
+        ],
         "mode": "view"
+      }
+    ],
+    "preferences": [
+      {
+        "id": "timestampUnit",
+        "type": "select",
+        "label": {
+          "en": "Input timestamp unit",
+          "zh-CN": "输入时间戳单位"
+        },
+        "default": "auto",
+        "options": [
+          {
+            "value": "auto",
+            "label": {
+              "en": "Auto detect",
+              "zh-CN": "自动识别"
+            }
+          },
+          {
+            "value": "seconds",
+            "label": {
+              "en": "Seconds",
+              "zh-CN": "秒"
+            }
+          },
+          {
+            "value": "milliseconds",
+            "label": {
+              "en": "Milliseconds",
+              "zh-CN": "毫秒"
+            }
+          }
+        ]
+      },
+      {
+        "id": "defaultTimeZone",
+        "type": "select",
+        "label": {
+          "en": "Default time zone",
+          "zh-CN": "默认时区"
+        },
+        "default": "local",
+        "options": [
+          {
+            "value": "local",
+            "label": {
+              "en": "System local time",
+              "zh-CN": "系统本地时间"
+            }
+          },
+          {
+            "value": "UTC",
+            "label": "UTC"
+          },
+          {
+            "value": "Asia/Shanghai",
+            "label": {
+              "en": "Asia/Shanghai",
+              "zh-CN": "亚洲/上海"
+            }
+          },
+          {
+            "value": "America/New_York",
+            "label": {
+              "en": "America/New York",
+              "zh-CN": "美洲/纽约"
+            }
+          },
+          {
+            "value": "Europe/London",
+            "label": {
+              "en": "Europe/London",
+              "zh-CN": "欧洲/伦敦"
+            }
+          },
+          {
+            "value": "Asia/Tokyo",
+            "label": {
+              "en": "Asia/Tokyo",
+              "zh-CN": "亚洲/东京"
+            }
+          }
+        ]
       }
     ]
   },
