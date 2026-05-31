@@ -33,13 +33,13 @@ npm run check
 npm run pack
 ```
 
-The package script writes `release/com.deskit.timestamp-0.2.0.deskit` and a matching `.sha256` file.
+The package script writes `release/com.deskit.timestamp-0.3.0.deskit` and a matching `.sha256` file.
 
 ## Publish
 
 ```bash
-git tag v0.2.0
-git push --tags
+git tag v0.3.0
+git push origin v0.3.0
 ```
 
 The release workflow builds the `.deskit` package and attaches it to the GitHub Release. Submit the generated release asset URL and SHA-256 to [DesKit-Marketplace](https://github.com/WiIIiamWei/DesKit-Marketplace).
