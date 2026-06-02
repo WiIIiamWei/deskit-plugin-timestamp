@@ -12,6 +12,7 @@
   },
   "version": "0.3.0",
   "author": "DesKit",
+  "icon": "lucide:clock",
   "engines": {
     "deskit": "^0.2.0"
   },
@@ -39,6 +40,7 @@
           "日期",
           "时间"
         ],
+        "icon": "lucide:clock",
         "mode": "view"
       }
     ],

@@ -25,6 +25,10 @@ Open DesKit, run **Convert Timestamp**, then type one of:
 
 The plugin also exposes **Input timestamp unit** and **Default time zone** preferences in DesKit's plugin settings page.
 
+The manifest declares `icon: "lucide:clock"` at both plugin and command
+level. Keep this aligned with the Marketplace listing so installed plugins
+and marketplace cards render the same icon.
+
 ## Develop
 
 ```bash
