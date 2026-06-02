@@ -10,7 +10,7 @@
     "en": "Convert between Unix timestamps and readable dates.",
     "zh-CN": "在 Unix 时间戳和可读日期之间相互转换。"
   },
-  "version": "0.3.0",
+  "version": "0.3.1",
   "author": "DesKit",
   "icon": "lucide:clock",
   "engines": {
